@@ -27,7 +27,8 @@ ul
 4) добавить span в конец body
 5) создать тэги div 3 шт c атрибутом id = ("divElem"+index) 
 зависящим от индекса
- добавить элементы в конец body
-
+добавить элементы в конец body
 Сдать в виде github репозитория */
 
+
+const firstElement = document.getElementById("qwerty");
