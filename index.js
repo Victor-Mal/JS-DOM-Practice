@@ -32,3 +32,27 @@ ul
 
 
 const firstElement = document.getElementById("qwerty");
+const secondElement = document.getElementById("asdfg");
+
+const ul = document.createElement('ul');
+for (let i = 0; i < 3; i++) {
+    let li = document.createElement('li');
+    li.className = 'liElem';
+    
+    li.style.fontStyle = "italic";
+    
+    //добавил через js так, как при использывании 
+    //style (index.html: 9-13) в fontStyle 
+    //(NodeList(3) [li.liElem, li.liElem, li.liElem] > 
+    // li.liElem > style > fontStyle) 
+    //было пусто, а так быть не должно, если я правильно 
+    //понял задание
+    li.textContent = `lorem ${i}`
+    ul.append(li);
+}
+secondElement.append(ul);
+
+const allLi = document.querySelectorAll('li')
+console.log(allLi);
+
+
