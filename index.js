@@ -42,17 +42,28 @@ for (let i = 0; i < 3; i++) {
     liElem.style.fontStyle = "italic";
     
     //добавил через js так, как при использывании 
-    //style (index.html: 9-13) в fontStyle 
+    //style (index.html: 10-12) в fontStyle 
     //(NodeList(3) [li.liElem, li.liElem, li.liElem] > 
     // li.liElem > style > fontStyle) 
     //было пусто, а так быть не должно, если я правильно 
     //понял задание
-    liElem.textContent = `lorem ${i}`
+
+    liElem.textContent = `lorem ${i}`;
     ulElem.append(liElem);
 }
 secondElement.append(ulElem);
-
 const allLi = document.querySelectorAll('li')
 console.log(allLi);
 
 
+const spanElem = document.createElement('span');
+spanElem.className = 'spanElem';
+spanElem.textContent = 'qwertylions';
+document.body.append(spanElem);
+
+for (let index = 0; index < 3; index++) {
+    const divElem = document.createElement('div');
+    divElem.id = 'divElem' + index
+    divElem.textContent = `divElem${index}`;
+    document.body.append(divElem);
+}
