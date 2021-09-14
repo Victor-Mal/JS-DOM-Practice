@@ -34,12 +34,12 @@ ul
 const firstElement = document.getElementById("qwerty");
 const secondElement = document.getElementById("asdfg");
 
-const ul = document.createElement('ul');
+const ulElem = document.createElement('ul');
 for (let i = 0; i < 3; i++) {
-    let li = document.createElement('li');
-    li.className = 'liElem';
+    const liElem = document.createElement('li');
+    liElem.className = 'liElem';
     
-    li.style.fontStyle = "italic";
+    liElem.style.fontStyle = "italic";
     
     //добавил через js так, как при использывании 
     //style (index.html: 9-13) в fontStyle 
@@ -47,10 +47,10 @@ for (let i = 0; i < 3; i++) {
     // li.liElem > style > fontStyle) 
     //было пусто, а так быть не должно, если я правильно 
     //понял задание
-    li.textContent = `lorem ${i}`
-    ul.append(li);
+    liElem.textContent = `lorem ${i}`
+    ulElem.append(liElem);
 }
-secondElement.append(ul);
+secondElement.append(ulElem);
 
 const allLi = document.querySelectorAll('li')
 console.log(allLi);
